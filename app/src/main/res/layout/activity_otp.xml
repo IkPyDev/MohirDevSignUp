@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    tools:context=".OtpActivity">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="20dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_bold"
+
+        android:text="@string/email_sign_up"
+        android:textColor="#000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/back" />
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:fontFamily="@font/inter_bold"
+        android:text="@string/otp_welcome"
+        android:textColor="#000"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/back" />
+
+    <TextView
+        android:id="@+id/email_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/inter_bold"
+        android:text="@string/otp_hint"
+        android:textColor="#C4C4C4"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcome" />
+
+    <EditText
+        android:id="@+id/edit1"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/edit_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email_hint" />
+
+    <EditText
+        android:id="@+id/edit2"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        app:layout_constraintEnd_toStartOf="@id/edit3"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/edit_bg"
+        app:layout_constraintStart_toEndOf="@id/edit1"
+        app:layout_constraintTop_toBottomOf="@id/email_hint" />
+
+    <EditText
+        android:id="@+id/edit3"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/edit_bg"
+        app:layout_constraintEnd_toStartOf="@id/edit4"
+        app:layout_constraintStart_toEndOf="@id/edit2"
+        app:layout_constraintTop_toBottomOf="@id/email_hint" />
+
+    <EditText
+        android:id="@+id/edit4"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/edit_bg"
+        app:layout_constraintStart_toEndOf="@id/edit3"
+        app:layout_constraintTop_toBottomOf="@id/email_hint" />
+
+    <TextView
+        android:id="@+id/rec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:fontFamily="@font/inter_bold"
+        android:text="@string/otp_rec"
+        android:textColor="#C4C4C4"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit2" />
+
+    <TextView
+        android:id="@+id/rec_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_bold"
+        android:text="@string/otp_rec_code"
+        android:textStyle="bold"
+
+        android:textColor="@color/green"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rec" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_bold"
+        android:textSize="13sp"
+        android:textColor="#000"
+        android:layout_marginBottom="16dp"
+        android:text="@string/otp_1"
+        app:layout_constraintBottom_toTopOf="@id/select"
+        app:layout_constraintEnd_toEndOf="@id/select"/>
+
+    <View
+        android:id="@+id/select"
+        android:layout_width="0dp"
+        android:layout_height="8dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/didiver_bg"
+        app:layout_constraintBottom_toTopOf="@id/next"
+        app:layout_constraintEnd_toEndOf="@id/next"
+        app:layout_constraintStart_toStartOf="@id/next" />
+
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="31dp"
+        android:backgroundTint="@color/green"
+        android:fontFamily="@font/inter_bold"
+        android:text="@string/verify"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
